@@ -5,10 +5,11 @@ A FIFO (First-In, First-Out) or queue is a memory structure commonly used in har
 
 
 **Block Diagram**
-                 +------------------------------------------------------+
+                    +------------------------------------------------------+
                     |                      FIFO                            |
                     |                                                      |
                     |   +-------------------------------+                  |
+                    |   |                               |                  |
 Write Data -------->|   |                               |                  |
 Write Enable ------>|   |                               |-------> Read Data
 Write Clock ------->|   |      Dual-Port Memory         |<------- Read Clock
@@ -17,7 +18,7 @@ Write Clock ------->|   |      Dual-Port Memory         |<------- Read Clock
                     |   +-------------------------------+                  |
                     |           ^                  ^                       |
                     |           |                  |                       |
-                    |    Write Pointer      Read Pointer                  |
+                    |    Write Pointer      Read Pointer                   |
                     |           |                  |                       |
                     |           +--------+---------+                       |
                     |                    |                                 |
@@ -29,6 +30,11 @@ Write Clock ------->|   |      Dual-Port Memory         |<------- Read Clock
                     |  Almost Full                 Almost Empty            |
                     |  Overflow                    Underflow               |
                     +------------------------------------------------------+
+
+<img width="1045" height="862" alt="image" src="https://github.com/user-attachments/assets/06069df5-abc8-40cc-ad83-ee3040852a37" />
+
+
+
 
 
                    ** Explain About Each Block**
