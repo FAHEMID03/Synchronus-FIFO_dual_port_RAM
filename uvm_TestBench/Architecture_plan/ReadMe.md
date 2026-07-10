@@ -31,3 +31,31 @@ Sequencer     Driver          Monitor                  Assertions
  Interface
       |
  FIFO DUT**
+
+** Planing Arechitecture**
+                                  fifo_test
+                                      │ 
+                                fifo_virtual_sequence 
+                                      │
+                                fifo_virtual_sequencer
+                                      │
+                              ---------------------- 
+                              |                    │   
+                              │                    |
+                        Write Agent             Read Agent 
+                          │                        |
+                --------------------             --------------------
+               │         │        │                  │      │       │
+            Sequencer  Driver   Monitor         Sequencer   Driver  Monitor 
+                         │                                    │
+                         └──────────┬────────---------------- │ 
+                                FIFO Interface
+                                     │ 
+                                Synchronous FIFO 
+                                     │
+                      -------------------------- 
+                      │                        │ 
+                  Scoreboard               Coverage 
+                      │
+                  Reference Queue
+ 
