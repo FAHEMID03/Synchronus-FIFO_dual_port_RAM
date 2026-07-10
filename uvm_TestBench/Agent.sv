@@ -197,7 +197,6 @@ class sync_fifo_read_agent extends uvm_agent;
       );
 
    endfunction
-
 endclass
 
 `endif
